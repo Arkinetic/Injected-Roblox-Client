@@ -1,0 +1,501 @@
+-- Injected Client
+-- for the sake of it use the injector that is soon to be released after byfron is patched
+local Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+function loadClient()
+   if game.CoreGui:FindFirstChild('ARKClient') ~= nil then
+		game.CoreGui['ARKClient']:Destroy()
+   end
+    local ARKClient = Instance.new('ScreenGui')
+    local bg = Instance.new('Frame')
+    local sidebar = Instance.new('Frame')
+    local mainbtn = Instance.new('TextButton')
+    local UICorner = Instance.new('UICorner')
+    local watermark = Instance.new('TextLabel')
+    local playerbtn = Instance.new('TextButton')
+    local UICorner_2 = Instance.new('UICorner')
+    local main = Instance.new('Frame')
+    local destroyui = Instance.new('TextButton')
+    local UICorner_3 = Instance.new('UICorner')
+    local infyieldframe = Instance.new('Frame')
+    local UICorner_4 = Instance.new('UICorner')
+    local TextLabel = Instance.new('TextLabel')
+    local getinfyield = Instance.new('TextButton')
+    local UICorner_5 = Instance.new('UICorner')
+    local gamename = Instance.new('TextLabel')
+    local dexframe = Instance.new('Frame')
+    local UICorner_6 = Instance.new('UICorner')
+    local TextLabel_2 = Instance.new('TextLabel')
+    local getdex = Instance.new('TextButton')
+    local UICorner_7 = Instance.new('UICorner')
+    local remotespyframe = Instance.new('Frame')
+    local UICorner_8 = Instance.new('UICorner')
+    local TextLabel_3 = Instance.new('TextLabel')
+    local getrspy = Instance.new('TextButton')
+    local UICorner_9 = Instance.new('UICorner')
+    local player = Instance.new('Frame')
+    local walkspeedframe = Instance.new('Frame')
+    local TextLabel_4 = Instance.new('TextLabel')
+    local maxincreasespeed = Instance.new('TextButton')
+    local UICorner_10 = Instance.new('UICorner')
+    local fastincreasespeed = Instance.new('TextButton')
+    local UICorner_11 = Instance.new('UICorner')
+    local defaultspeed = Instance.new('TextButton')
+    local UICorner_12 = Instance.new('UICorner')
+    local UICorner_13 = Instance.new('UICorner')
+    local jumppowerframe = Instance.new('Frame')
+    local UICorner_14 = Instance.new('UICorner')
+    local TextLabel_5 = Instance.new('TextLabel')
+    local veryhighjump = Instance.new('TextButton')
+    local UICorner_15 = Instance.new('UICorner')
+    local highjump = Instance.new('TextButton')
+    local UICorner_16 = Instance.new('UICorner')
+    local defaultjump = Instance.new('TextButton')
+    local UICorner_17 = Instance.new('UICorner')
+    local btoolsframe = Instance.new('Frame')
+    local UICorner_18 = Instance.new('UICorner')
+    local TextLabel_6 = Instance.new('TextLabel')
+    local getbtools = Instance.new('TextButton')
+    local UICorner_19 = Instance.new('UICorner')
+
+    ARKClient.Name = 'ARKClient'
+    ARKClient.Parent = game.CoreGui
+    ARKClient.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    bg.Name = 'bg'
+    bg.Parent = ARKClient
+    bg.Active = true
+    bg.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    bg.BorderColor3 = Color3.fromRGB(255, 0, 4)
+    bg.BorderSizePixel = 0
+    bg.Position = UDim2.new(0.274585217, 0, 0.271634609, 0)
+    bg.Size = UDim2.new(0, 614, 0, 379)
+
+    sidebar.Name = 'sidebar'
+    sidebar.Parent = bg
+    sidebar.Active = true
+    sidebar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    sidebar.BorderSizePixel = 0
+    sidebar.Size = UDim2.new(0, 172, 0, 379)
+
+    mainbtn.Name = 'mainbtn'
+    mainbtn.Parent = sidebar
+    mainbtn.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    mainbtn.BorderSizePixel = 0
+    mainbtn.Position = UDim2.new(0.0930232555, 0, 0.0633245409, 0)
+    mainbtn.Size = UDim2.new(0, 140, 0, 42)
+    mainbtn.Font = Enum.Font.SourceSans
+    mainbtn.Text = 'Main'
+    mainbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    mainbtn.TextSize = 22.000
+    mainbtn.TextWrapped = true
+
+    UICorner.Parent = mainbtn
+
+    watermark.Name = 'watermark'
+    watermark.Parent = sidebar
+    watermark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    watermark.BackgroundTransparency = 1.000
+    watermark.BorderSizePixel = 0
+    watermark.Position = UDim2.new(0, 0, 0.899736106, 0)
+    watermark.Size = UDim2.new(0, 100, 0, 38)
+    watermark.Font = Enum.Font.SourceSans
+    watermark.Text = 'ARKClient v1'
+    watermark.TextColor3 = Color3.fromRGB(75, 75, 75)
+    watermark.TextSize = 20.000
+
+    playerbtn.Name = 'playerbtn'
+    playerbtn.Parent = sidebar
+    playerbtn.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    playerbtn.BorderSizePixel = 0
+    playerbtn.Position = UDim2.new(0.0930232555, 0, 0.192612141, 0)
+    playerbtn.Size = UDim2.new(0, 140, 0, 42)
+    playerbtn.Font = Enum.Font.SourceSans
+    playerbtn.Text = 'Player'
+    playerbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    playerbtn.TextSize = 22.000
+    playerbtn.TextWrapped = true
+
+    UICorner_2.Parent = playerbtn
+
+    main.Name = 'main'
+    main.Parent = bg
+    main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    main.BorderSizePixel = 0
+    main.Position = UDim2.new(0.281758964, 0, 0.00263852254, 0)
+    main.Size = UDim2.new(0, 441, 0, 378)
+
+    destroyui.Name = 'destroyui'
+    destroyui.Parent = main
+    destroyui.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    destroyui.BorderSizePixel = 0
+    destroyui.Position = UDim2.new(0.0272108838, 0, 0.854497313, 0)
+    destroyui.Size = UDim2.new(0, 416, 0, 43)
+    destroyui.Font = Enum.Font.SourceSans
+    destroyui.Text = 'Destroy UI'
+    destroyui.TextColor3 = Color3.fromRGB(255, 255, 255)
+    destroyui.TextSize = 43.000
+
+    UICorner_3.Parent = destroyui
+
+    infyieldframe.Name = 'infyieldframe'
+    infyieldframe.Parent = main
+    infyieldframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    infyieldframe.Position = UDim2.new(0.0272108838, 0, 0.129629627, 0)
+    infyieldframe.Size = UDim2.new(0, 134, 0, 128)
+
+    UICorner_4.Parent = infyieldframe
+
+    TextLabel.Parent = infyieldframe
+    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.BackgroundTransparency = 1.000
+    TextLabel.Position = UDim2.new(0.0636751205, 0, 0.0604746342, 0)
+    TextLabel.Size = UDim2.new(0, 116, 0, 50)
+    TextLabel.Font = Enum.Font.SourceSans
+    TextLabel.Text = 'Infinite Yield'
+    TextLabel.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel.TextSize = 27.000
+    TextLabel.TextWrapped = true
+
+    getinfyield.Name = 'getinfyield'
+    getinfyield.Parent = infyieldframe
+    getinfyield.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    getinfyield.BorderSizePixel = 0
+    getinfyield.Position = UDim2.new(0.222130239, 0, 0.537861586, 0)
+    getinfyield.Size = UDim2.new(0, 84, 0, 42)
+    getinfyield.Font = Enum.Font.SourceSans
+    getinfyield.Text = 'GET'
+    getinfyield.TextColor3 = Color3.fromRGB(255, 255, 255)
+    getinfyield.TextSize = 22.000
+    getinfyield.TextWrapped = true
+
+    UICorner_5.Parent = getinfyield
+
+    gamename.Name = 'gamename'
+    gamename.Parent = main
+    gamename.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    gamename.BackgroundTransparency = 1.000
+    gamename.Position = UDim2.new(0.0251493901, 0, -0.000248015887, 0)
+    gamename.Size = UDim2.new(0, 424, 0, 50)
+    gamename.Font = Enum.Font.SourceSans
+    gamename.Text = 'Game: 'gamename.Text = 'Game: '.. game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name
+    gamename.TextColor3 = Color3.fromRGB(100, 100, 100)
+    gamename.TextSize = 27.000
+    gamename.TextWrapped = true
+    gamename.TextXAlignment = Enum.TextXAlignment.Left
+
+    dexframe.Name = 'dexframe'
+    dexframe.Parent = main
+    dexframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    dexframe.Position = UDim2.new(0.346938789, 0, 0.129629642, 0)
+    dexframe.Size = UDim2.new(0, 134, 0, 128)
+
+    UICorner_6.Parent = dexframe
+
+    TextLabel_2.Parent = dexframe
+    TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_2.BackgroundTransparency = 1.000
+    TextLabel_2.Position = UDim2.new(0.0636751205, 0, 0.0604746342, 0)
+    TextLabel_2.Size = UDim2.new(0, 116, 0, 50)
+    TextLabel_2.Font = Enum.Font.SourceSans
+    TextLabel_2.Text = 'Dex Explorer'
+    TextLabel_2.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel_2.TextSize = 27.000
+    TextLabel_2.TextWrapped = true
+
+    getdex.Name = 'getdex'
+    getdex.Parent = dexframe
+    getdex.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    getdex.BorderSizePixel = 0
+    getdex.Position = UDim2.new(0.222130239, 0, 0.537861586, 0)
+    getdex.Size = UDim2.new(0, 84, 0, 42)
+    getdex.Font = Enum.Font.SourceSans
+    getdex.Text = 'GET'
+    getdex.TextColor3 = Color3.fromRGB(255, 255, 255)
+    getdex.TextSize = 22.000
+    getdex.TextWrapped = true
+
+    UICorner_7.Parent = getdex
+
+    remotespyframe.Name = 'remotespyframe'
+    remotespyframe.Parent = main
+    remotespyframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    remotespyframe.Position = UDim2.new(0.666666627, 0, 0.129629642, 0)
+    remotespyframe.Size = UDim2.new(0, 134, 0, 128)
+
+    UICorner_8.Parent = remotespyframe
+
+    TextLabel_3.Parent = remotespyframe
+    TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_3.BackgroundTransparency = 1.000
+    TextLabel_3.Position = UDim2.new(0.0636751205, 0, 0.0604746342, 0)
+    TextLabel_3.Size = UDim2.new(0, 116, 0, 50)
+    TextLabel_3.Font = Enum.Font.SourceSans
+    TextLabel_3.Text = 'Remote Spy'
+    TextLabel_3.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel_3.TextSize = 27.000
+    TextLabel_3.TextWrapped = true
+
+    getrspy.Name = 'getrspy'
+    getrspy.Parent = remotespyframe
+    getrspy.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    getrspy.BorderSizePixel = 0
+    getrspy.Position = UDim2.new(0.222130239, 0, 0.537861586, 0)
+    getrspy.Size = UDim2.new(0, 84, 0, 42)
+    getrspy.Font = Enum.Font.SourceSans
+    getrspy.Text = 'GET'
+    getrspy.TextColor3 = Color3.fromRGB(255, 255, 255)
+    getrspy.TextSize = 22.000
+    getrspy.TextWrapped = true
+
+    UICorner_9.Parent = getrspy
+
+    player.Name = 'player'
+    player.Parent = bg
+    player.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    player.BorderSizePixel = 0
+    player.Position = UDim2.new(0.281758964, 0, 0.00263852254, 0)
+    player.Size = UDim2.new(0, 441, 0, 378)
+    player.Visible = false
+
+    walkspeedframe.Name = 'walkspeedframe'
+    walkspeedframe.Parent = player
+    walkspeedframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    walkspeedframe.Position = UDim2.new(0.0272108838, 0, 0.0449735448, 0)
+    walkspeedframe.Size = UDim2.new(0, 417, 0, 54)
+
+    TextLabel_4.Parent = walkspeedframe
+    TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_4.BackgroundTransparency = 1.000
+    TextLabel_4.Position = UDim2.new(0, 0, 0.0370370373, 0)
+    TextLabel_4.Size = UDim2.new(0, 117, 0, 50)
+    TextLabel_4.Font = Enum.Font.SourceSans
+    TextLabel_4.Text = 'Walkspeed'
+    TextLabel_4.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel_4.TextSize = 27.000
+    TextLabel_4.TextWrapped = true
+
+    maxincreasespeed.Name = 'maxincreasespeed'
+    maxincreasespeed.Parent = walkspeedframe
+    maxincreasespeed.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    maxincreasespeed.BorderSizePixel = 0
+    maxincreasespeed.Position = UDim2.new(0.77407831, 0, 0.100361578, 0)
+    maxincreasespeed.Size = UDim2.new(0, 84, 0, 42)
+    maxincreasespeed.Font = Enum.Font.SourceSans
+    maxincreasespeed.Text = 'Ultra'
+    maxincreasespeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+    maxincreasespeed.TextSize = 22.000
+    maxincreasespeed.TextWrapped = true
+
+    UICorner_10.Parent = maxincreasespeed
+
+    fastincreasespeed.Name = 'fastincreasespeed'
+    fastincreasespeed.Parent = walkspeedframe
+    fastincreasespeed.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    fastincreasespeed.BorderSizePixel = 0
+    fastincreasespeed.Position = UDim2.new(0.55585289, 0, 0.100361578, 0)
+    fastincreasespeed.Size = UDim2.new(0, 84, 0, 42)
+    fastincreasespeed.Font = Enum.Font.SourceSans
+    fastincreasespeed.Text = 'Fast'
+    fastincreasespeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+    fastincreasespeed.TextSize = 22.000
+    fastincreasespeed.TextWrapped = true
+
+    UICorner_11.Parent = fastincreasespeed
+
+    defaultspeed.Name = 'defaultspeed'
+    defaultspeed.Parent = walkspeedframe
+    defaultspeed.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    defaultspeed.BorderSizePixel = 0
+    defaultspeed.Position = UDim2.new(0.335229397, 0, 0.100361578, 0)
+    defaultspeed.Size = UDim2.new(0, 84, 0, 42)
+    defaultspeed.Font = Enum.Font.SourceSans
+    defaultspeed.Text = 'Default'
+    defaultspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+    defaultspeed.TextSize = 22.000
+    defaultspeed.TextWrapped = true
+
+    UICorner_12.Parent = defaultspeed
+
+    UICorner_13.Parent = walkspeedframe
+
+    jumppowerframe.Name = 'jumppowerframe'
+    jumppowerframe.Parent = player
+    jumppowerframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    jumppowerframe.Position = UDim2.new(0.0272108838, 0, 0.214285702, 0)
+    jumppowerframe.Size = UDim2.new(0, 417, 0, 54)
+
+    UICorner_14.Parent = jumppowerframe
+
+    TextLabel_5.Parent = jumppowerframe
+    TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_5.BackgroundTransparency = 1.000
+    TextLabel_5.Position = UDim2.new(0, 0, 0.0370370373, 0)
+    TextLabel_5.Size = UDim2.new(0, 117, 0, 50)
+    TextLabel_5.Font = Enum.Font.SourceSans
+    TextLabel_5.Text = 'Jumppower'
+    TextLabel_5.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel_5.TextSize = 27.000
+    TextLabel_5.TextWrapped = true
+
+    veryhighjump.Name = 'veryhighjump'
+    veryhighjump.Parent = jumppowerframe
+    veryhighjump.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    veryhighjump.BorderSizePixel = 0
+    veryhighjump.Position = UDim2.new(0.77407831, 0, 0.100361578, 0)
+    veryhighjump.Size = UDim2.new(0, 84, 0, 42)
+    veryhighjump.Font = Enum.Font.SourceSans
+    veryhighjump.Text = 'Very High'
+    veryhighjump.TextColor3 = Color3.fromRGB(255, 255, 255)
+    veryhighjump.TextSize = 22.000
+    veryhighjump.TextWrapped = true
+
+    UICorner_15.Parent = veryhighjump
+
+    highjump.Name = 'highjump'
+    highjump.Parent = jumppowerframe
+    highjump.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    highjump.BorderSizePixel = 0
+    highjump.Position = UDim2.new(0.55585289, 0, 0.100361578, 0)
+    highjump.Size = UDim2.new(0, 84, 0, 42)
+    highjump.Font = Enum.Font.SourceSans
+    highjump.Text = 'High'
+    highjump.TextColor3 = Color3.fromRGB(255, 255, 255)
+    highjump.TextSize = 22.000
+    highjump.TextWrapped = true
+
+    UICorner_16.Parent = highjump
+
+    defaultjump.Name = 'defaultjump'
+    defaultjump.Parent = jumppowerframe
+    defaultjump.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    defaultjump.BorderSizePixel = 0
+    defaultjump.Position = UDim2.new(0.335229397, 0, 0.100361578, 0)
+    defaultjump.Size = UDim2.new(0, 84, 0, 42)
+    defaultjump.Font = Enum.Font.SourceSans
+    defaultjump.Text = 'Default'
+    defaultjump.TextColor3 = Color3.fromRGB(255, 255, 255)
+    defaultjump.TextSize = 22.000
+    defaultjump.TextWrapped = true
+
+    UICorner_17.Parent = defaultjump
+
+    btoolsframe.Name = 'btoolsframe'
+    btoolsframe.Parent = player
+    btoolsframe.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    btoolsframe.Position = UDim2.new(0.0272108838, 0, 0.380952358, 0)
+    btoolsframe.Size = UDim2.new(0, 417, 0, 54)
+
+    UICorner_18.Parent = btoolsframe
+
+    TextLabel_6.Parent = btoolsframe
+    TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel_6.BackgroundTransparency = 1.000
+    TextLabel_6.Position = UDim2.new(0, 0, 0.0370370373, 0)
+    TextLabel_6.Size = UDim2.new(0, 82, 0, 50)
+    TextLabel_6.Font = Enum.Font.SourceSans
+    TextLabel_6.Text = 'BTools'
+    TextLabel_6.TextColor3 = Color3.fromRGB(100, 100, 100)
+    TextLabel_6.TextSize = 27.000
+    TextLabel_6.TextWrapped = true
+
+    getbtools.Name = 'getbtools'
+    getbtools.Parent = btoolsframe
+    getbtools.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+    getbtools.BorderSizePixel = 0
+    getbtools.Position = UDim2.new(0.77407831, 0, 0.100361578, 0)
+    getbtools.Size = UDim2.new(0, 84, 0, 42)
+    getbtools.Font = Enum.Font.SourceSans
+    getbtools.Text = 'GET'
+    getbtools.TextColor3 = Color3.fromRGB(255, 255, 255)
+    getbtools.TextSize = 22.000
+    getbtools.TextWrapped = true
+
+    UICorner_19.Parent = getbtools
+
+    -- Scripts
+
+    -- draggable
+
+    bg.Draggable = true
+
+    -- tab switching
+
+    mainbtn.MouseButton1Down:Connect(function()
+		-- set self color
+		mainbtn.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+		-- set tab frame
+		main.Visible = true
+		player.Visible = false
+		-- set other tab colors
+		playerbtn.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+	end)
+
+	playerbtn.MouseButton1Down:Connect(function()
+		-- set self color
+		playerbtn.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+		-- set tab frame
+		main.Visible = false
+		player.Visible = true
+		-- set other tab colors
+		mainbtn.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+	end)
+
+    -- destroy ui btn
+      destroyui.MouseButton1Down:Connect(function()
+          game.CoreGui['ARKClient']:Destroy()
+      end)
+
+      -- player buttons
+      
+      getbtools.MouseButton1Down:Connect(function()
+        for i=2,4 do
+        local btool = Instance.new('HopperBin')
+        btool.BinType=i
+        btool.Parent=game:service'Players'.LocalPlayer.Backpack
+        end
+ 
+      end)
+
+      -- walkspeed and jumppower
+
+      defaultspeed.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+      end)
+      fastincreasespeed.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+      end)
+      maxincreasespeed.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+      end)
+
+      defaultjump.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+      end)
+      highjump.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.JumpPower = 90
+      end)
+      veryhighjump.MouseButton1Down:Connect(function()
+          game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+      end)
+
+      -- script buttons
+      getinfyield.MouseButton1Down:Connect(function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      end)
+      getdex.MouseButton1Down:Connect(function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/infyiff/backup/main/dex.lua'))()
+      end)
+      getrspy.MouseButton1Down:Connect(function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/rerSMCdn'))()
+      end)
+end
+
+if client == 'ARKClientInjector' then
+    print('ARKClient has been injected into Roblox.')
+    Orion:MakeNotification({Name = 'ARKClient', Content = 'Successfully Injected into Roblox.', Image = 'rbxassetid://4483345998', Time = 5})
+    loadClient()
+else
+    warn('Loser! Use the actual injector please :(')
+    Orion:MakeNotification({Name = 'Loser!', Content = 'Use the actual injector please :(', Image = 'rbxassetid://4483345998', Time = 5})
+end
